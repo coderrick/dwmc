@@ -1,0 +1,2 @@
+appid = ca1bz8GrwIK2Ug46fHW6
+apikey = WLDrSlQUONXTWI1F6EkB-m_qZ71K7Jwba0gCOGOsPG4

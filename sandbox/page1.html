@@ -6,55 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DWMC</title>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="two.css">
 </head>
 
-<body>
-    
-    <header style="color: white;">
+<body id="markers-on-the-map">
+    <header>
         DWMC
     </header>
-    <div id="map"></div>
-    <script>
-      var map;
-      
-
-
-      function initMap() {
-        var heatmapData = [
-  new google.maps.LatLng(37.782, -122.447),
-  new google.maps.LatLng(37.782, -122.445),
-  new google.maps.LatLng(37.782, -122.443),
-  new google.maps.LatLng(37.782, -122.441),
-  new google.maps.LatLng(37.782, -122.439),
-  new google.maps.LatLng(37.782, -122.437),
-  new google.maps.LatLng(37.782, -122.435),
-  new google.maps.LatLng(37.785, -122.447),
-  new google.maps.LatLng(37.785, -122.445),
-  new google.maps.LatLng(37.785, -122.443),
-  new google.maps.LatLng(37.785, -122.441),
-  new google.maps.LatLng(37.785, -122.439),
-  new google.maps.LatLng(37.785, -122.437),
-  new google.maps.LatLng(37.785, -122.435)
-];
-        var sanFrancisco = new google.maps.LatLng(37.774546, -122.433523);
-        
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: sanFrancisco,
-  zoom: 13,
-  mapTypeId: 'satellite'
-        });
-        
-        var heatmap = new google.maps.visualization.HeatmapLayer({
-  data: heatmapData
-});
-heatmap.setMap(map);
-      }
-      
-    </script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlb1MwkgEmu6_RxqKZqDFv6afAYvyn_2I&libraries=visualization&callback=initMap" async defer></script>
+    <div class="page-header">
+            <h1>Map with Driving Route from A to B</h1>
+            <p>Request a driving route from A to B and display it on the map</p>
+        </div>
+        <p>This example calculates the fastest car route from the <b>Brandenburg Gate</b> 
+          in the centre of Berlin <i>(52.51605°N, 13.37787°E)</i> to <b>Friedrichstraße Railway Station</b> 
+          <i>(52.52058°N, 13.38615°E)</i>, and displays it on the map.</p>
+        <div id="map"></div>
+        <div id="panel"></div>
+        <h3>Code</h3>
+        <p>Access to the routing service is obtained from the <code>H.service.Platform</code> by calling 
+          <code>getRoutingService()</code>. The <code>calculateRoute()</code> method is used to calculate the fastest 
+          car (<code>mode:fastest;car</code>) route by passing in the relevant parameters as defined in 
+          <a href="http://developer.here.com/rest-apis/documentation/routing/topics/resource-calculate-route.html" target="_blank">Routing API</a>. 
     <footer>
             <section class='some-page-wrapper'>
                     <div class='row'>
@@ -104,11 +84,8 @@ heatmap.setMap(map);
                         </div>
                     </div>
                 </section>
-                <script defer>
-                        alert("Select the picture that most closely resembles the way to hold the steering wheel")
-                        </script>
     </footer>
-  
+    <script type="text/javascript" src='demo.js'></script>
 </body>
 
 </html>
