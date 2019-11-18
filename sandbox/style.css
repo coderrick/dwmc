@@ -1,0 +1,59 @@
+header{
+    background-color: red;
+    max-width:100%;
+    padding: 30px;
+    margin: 0px;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  /* width: -webkit-fill-available; */
+  /* background-color: lightgray; */
+  /* padding: 30px; */
+  width: 100%;
+  margin: 0px;
+}
+
+
+/* Custom classes and IDs */
+#map {
+    height: 475px;
+}
+.some-page-wrapper {
+    margin: 0px;
+    background-color: red;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .c {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+  
+  .orange-column {
+    background-color: orange;
+    height: 100px;
+  }
+  
+  .blue-column {
+    background-color: blue;
+    height: 100px;
+  }
+  
+  .green-column {
+    background-color: green;
+    height: 100px;
+  }
+  

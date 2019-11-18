@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DWMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        DWMC
+    </header>
+    <div id="map"></div>
+    <script>
+      var map;
+      
+
+
+      function initMap() {
+        var heatmapData = [
+  new google.maps.LatLng(37.782, -122.447),
+  new google.maps.LatLng(37.782, -122.445),
+  new google.maps.LatLng(37.782, -122.443),
+  new google.maps.LatLng(37.782, -122.441),
+  new google.maps.LatLng(37.782, -122.439),
+  new google.maps.LatLng(37.782, -122.437),
+  new google.maps.LatLng(37.782, -122.435),
+  new google.maps.LatLng(37.785, -122.447),
+  new google.maps.LatLng(37.785, -122.445),
+  new google.maps.LatLng(37.785, -122.443),
+  new google.maps.LatLng(37.785, -122.441),
+  new google.maps.LatLng(37.785, -122.439),
+  new google.maps.LatLng(37.785, -122.437),
+  new google.maps.LatLng(37.785, -122.435)
+];
+        var sanFrancisco = new google.maps.LatLng(37.774546, -122.433523);
+        
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: sanFrancisco,
+  zoom: 13,
+  mapTypeId: 'satellite'
+        });
+        
+        var heatmap = new google.maps.visualization.HeatmapLayer({
+  data: heatmapData
+});
+heatmap.setMap(map);
+      }
+      
+    </script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlb1MwkgEmu6_RxqKZqDFv6afAYvyn_2I&libraries=visualization&callback=initMap" async defer></script>
+    <footer>
+            <section class='some-page-wrapper'>
+                    <div class='row'>
+                        <div class='c'>
+                            <div class='orange-column'>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hondasteerwheel.svg/488px-Hondasteerwheel.svg.png"
+                                    alt="Steering Wheel.svg" style='height: 100%; width: 100%; object-fit: contain' />
+            
+                            </div>
+                        </div>
+                        <div class='c'>
+                            <div class='blue-column'>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hondasteerwheel.svg/488px-Hondasteerwheel.svg.png"
+                                    alt="Steering Wheel.svg" style='height: 100%; width: 100%; object-fit: contain' />
+            
+                            </div>
+                        </div>
+                        <div class='c'>
+                            <div class='green-column'>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hondasteerwheel.svg/488px-Hondasteerwheel.svg.png"
+                                    alt="Steering Wheel.svg" style='height: 100%; width: 100%; object-fit: contain' />
+            
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second -->
+                    <div class='row'>
+                        <div class='c'>
+                            <div class='green-column'>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hondasteerwheel.svg/488px-Hondasteerwheel.svg.png"
+                                    alt="Steering Wheel.svg" style='height: 100%; width: 100%; object-fit: contain' />
+            
+                            </div>
+                        </div>
+                        <div class='c'>
+                            <div class='orange-column'>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hondasteerwheel.svg/488px-Hondasteerwheel.svg.png"
+                                    alt="Steering Wheel.svg" style='height: 100%; width: 100%; object-fit: contain' />
+            
+                            </div>
+                        </div>
+                        <div class='c'>
+                            <div class='blue-column'>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hondasteerwheel.svg/488px-Hondasteerwheel.svg.png"
+                                    alt="Steering Wheel.svg" style='height: 100%; width: 100%; object-fit: contain' />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    </footer>
+</body>
+
+</html>
